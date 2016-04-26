@@ -90,12 +90,14 @@ CREATE TABLE Person
   WorkStatusID INT NOT NULL,
   SexID INT NOT NULL,
   MaritalStatusID INT NOT NULL,
+  EducationID INT NOT NULL,
   PRIMARY KEY (PersonID),
   FOREIGN KEY (ContactID) REFERENCES Contact_Details(ContactID),
   FOREIGN KEY (SkillID) REFERENCES Skill(SkillID),
   FOREIGN KEY (WorkStatusID) REFERENCES WorkStatus(WorkStatusID),
   FOREIGN KEY (SexID) REFERENCES Sex(SexID),
-  FOREIGN KEY (MaritalStatusID) REFERENCES MaritalStatus(MaritalStatusID)
+  FOREIGN KEY (MaritalStatusID) REFERENCES MaritalStatus(MaritalStatusID),
+  FOREIGN KEY (EducationID) REFERENCES Education(EducationID)
 );
 
 CREATE TABLE State
